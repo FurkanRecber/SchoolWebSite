@@ -1,0 +1,435 @@
+/*Ortak kısım*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4
+}
+
+.container .navbar {
+    background: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    width: 99.5vw;
+    height: 100px;
+    margin-left: calc((100% - 100vw) / 2);
+    margin-right: calc((100% - 100vw) / 2);
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: Reboto;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background: rgba(151, 2, 2, 0.8);
+    border-radius: 15px;
+    color: white;
+}
+
+.copy {
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: right;
+}
+
+/*Ortak kısım bitti*/
+/*Home.html kısmı*/
+
+.content .photo {
+    text-align: center;
+    overflow: hidden;
+}
+
+.content .photo img {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 800px;
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.content .photo .home:hover img {
+    transform: scale(1.05);
+}
+
+.announcement {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(51, 3, 3, 0.3);
+}
+
+.heading img {
+    width: 35px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.title {
+    color: #333;
+}
+
+.date {
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #555;
+}
+
+/*Home.html bitti*/
+/*University.html kısmı*/
+
+.content .photo .university {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content .photo .university:hover {
+    opacity: 0.5;
+}
+
+.page {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.right {
+    flex: 1;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 0 0;
+}
+
+.aboutUs {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.title {
+    color: rgb(151, 2, 2);
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(51, 3, 3, 0.3);
+    text-decoration: underline;
+}
+
+h2 {
+    color: #333;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    background-color: antiquewhite;
+    color: rgb(151, 2, 2);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.toggle-label:hover {
+    background-color: rgb(206, 193, 177);
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.toggle-input:checked~.toggle-content {
+    max-height: 1000px;
+}
+
+.units {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.units ul li {
+    margin-bottom: 5px;
+    font-family: Reboto;
+    text-align: left;
+}
+
+.units ul li:hover {
+    text-decoration: underline;
+}
+
+/*university.html bitti*/
+/*academics.html kısmı*/
+.table-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.table-container table:first-child {
+    margin-right: 100px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(234, 234, 234);
+}
+
+.table-container caption {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+    background-color: lightslategray;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/*academics.html bitti*/
+/*students.html kısmı*/
+
+.header_div {
+    text-align: center;
+}
+
+.header {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-left: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    display: inline-flex;
+    text-align: center;
+    background-color: lightslategray;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 8px;
+    margin: 0 70px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #333;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+section p {
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+section ul {
+    margin-left: 50px;
+}
+
+section ul li a {
+    color: darkred;
+    text-decoration: none;
+}
+
+/*students.html bitti*/
+/*campuslife.html kısmı*/
+
+#video-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#video {
+    position: relative;
+    width: 885px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*campuslife.html bitti*/
+/*documents.html kısmı*/
+
+.title-2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.document {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.document-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.document-list li {
+    margin-bottom: 10px;
+}
+
+.document-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.document-link:hover {
+    background-color: #45a049;
+}
+
+/*documents.html bitti*/
+/*login.html kısmı*/
+
+.login {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .btn-primary {
+        width: 100%;
+    }
+
+    /*login.html bitti*/
